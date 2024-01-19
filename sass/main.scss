@@ -41,6 +41,10 @@ header{
         align-items: flex-start;
         margin-top: 12px;
 
+        ul{
+            display: none;
+        }
+        
         button{
             border: none;
             background-color: transparent;
