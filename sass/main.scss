@@ -20,7 +20,7 @@ $gray: #979797;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 12px 0;
+    padding: 12px;
     gap: 20px;
     background-color: white;
 
@@ -90,6 +90,11 @@ header{
         margin: 12px 0; 
         font-weight: bold;
         letter-spacing: 2px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: $blue;
     }
 }
 
@@ -106,6 +111,7 @@ header{
         color: $yellow;
     }
 
+
     div{
         display: flex;
         flex-direction: column;
@@ -116,6 +122,11 @@ header{
             font-size: 2rem;
             font-weight: bold;
             color: white;
+            cursor: pointer;
+        }
+
+        .title:hover{
+            color: $yellow;
         }
 
         .txt{
@@ -171,7 +182,8 @@ header{
             }
 
             h3{
-                font-size: 2rem;
+                font-size: 1.7rem;
+                cursor: pointer;
             }
 
             h4{
@@ -179,6 +191,10 @@ header{
                 font-weight: 500;
                 line-height: 2.6rem;
                 color: $gray;
+            }
+
+            h3:hover{
+                color: $button-color;
             }
         }
     }
@@ -299,6 +315,11 @@ header{
         .article_second{
             grid-area: section2;
             margin: 0;
+            justify-content: space-evenly;
+
+            h3{
+                font-size: 4rem;
+            }
         }
     
         .article_list{
