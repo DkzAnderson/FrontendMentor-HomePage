@@ -1,0 +1,26 @@
+@mixin querie-s {
+    @media screen and (min-width: 767px){
+        @content;
+    }
+}
+
+@mixin querie-m {
+    @media screen and (min-width: 1020px) {
+        @content;
+    }
+}
+
+@mixin querie-l{
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+/*
+Mobile First -> s -> m -> l
+MF  767px o menos
+s   767px - 1019px
+m  1020px - 1199px
+l  1200px - ancho de pagina total
+*/
