@@ -24,104 +24,10 @@ $gray: #979797;
     gap: 20px;
     background-color: white;
 
-    @include querie-s{
-        display: grid;
-        grid-template-areas: 
-        "head head"
-        "section1 section2"
-        "section3 section3";
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 70% auto;
-        padding-top: 24px;
-        max-width: 1000px;
-        padding: 24px 20px;
-
-        header{
-            grid-area: head;
-
-            div{
-
-                button{
-                    display: none;
-                }
-
-                ul{
-                    width: 50%;
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 24px;
-                    list-style: none;
-
-                    li{
-                        color: $gray;
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-
-        .article_main{
-            grid-area: section1;
-            display: grid;
-            grid-template-areas: 
-            "img img"
-            "title txt"
-            "title btn";
-            margin: 0;
-
-            figure{
-                grid-area: img;
-                width: 100%;
-                height: 300px;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                    background-image: url('../assets/images/image-web-3-desktop.jpg');
-                }
-            }
-
-            h3{
-                grid-area: title;
-                line-height: 6rem;
-            }
-
-            h5{
-                grid-area: txt;
-            }
-
-            button{
-                grid-area: btn;
-                padding: 0px 42px;
-                margin: 0;
-            }
-        }
-
-        .article_second{
-            grid-area: section2;
-            margin: 0;
-        }
-
-        .article_list{
-            grid-area: section3;
-            margin: 0;
-            flex-direction: row;
-        }
-
-    }
-
-    @include querie-m{
-        max-width: 1200px;
-    }
 }
 
 body{
     background-color: black;
-    @include querie-s{
-        display: flex;
-        justify-content: center;
-        background-color: white;
-    }
 }
 
 header{
@@ -305,3 +211,104 @@ header{
     }
 }
 
+@include querie-s{
+
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .App{
+        display: grid;
+        grid-template-areas: 
+        "head head"
+        "section1 section2"
+        "section3 section3";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 70% auto;
+        padding-top: 24px;
+        max-width: 1000px;
+        padding: 24px 20px;
+    
+        header{
+            grid-area: head;
+    
+            div{
+    
+                button{
+                    display: none;
+                }
+    
+                ul{
+                    width: 50%;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 24px;
+                    list-style: none;
+    
+                    li{
+                        color: $gray;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    
+        .article_main{
+            grid-area: section1;
+            display: grid;
+            grid-template-areas: 
+            "img img"
+            "title txt"
+            "title btn";
+            margin: 0;
+    
+            figure{
+                grid-area: img;
+                width: 100%;
+                height: 300px;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../assets/images/image-web-3-desktop.jpg');
+                }
+            }
+    
+            h3{
+                grid-area: title;
+                line-height: 6rem;
+            }
+    
+            h5{
+                grid-area: txt;
+            }
+    
+            button{
+                grid-area: btn;
+                padding: 0px 42px;
+                margin: 0;
+            }
+        }
+    
+        .article_second{
+            grid-area: section2;
+            margin: 0;
+        }
+    
+        .article_list{
+            grid-area: section3;
+            margin: 0;
+            flex-direction: row;
+        }
+    }
+
+}
+
+@include querie-m{
+    .App{
+        max-width: 1200px;
+    }
+    
+}
