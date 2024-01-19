@@ -43,6 +43,7 @@ header{
 
         ul{
             display: none;
+    
         }
         
         button{
@@ -270,6 +271,11 @@ header{
                     li{
                         color: $gray;
                         font-size: 1.5rem;
+                        cursor: pointer;
+                    }
+
+                    li:hover{
+                        color: $button-color;
                     }
                 }
             }
